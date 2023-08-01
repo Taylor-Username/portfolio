@@ -53,7 +53,7 @@ const state = reactive({
     moreInfoDialog: {
         show: false
     },
-    rotateInterval: null
+    rotateInterval: null as ReturnType<typeof setInterval> | null
 })
 
 function rotateKeystonePhoto() {
@@ -66,6 +66,7 @@ onMounted(() => {
 })
 
 onUnmounted(() => {
+    if (!state.rotateInterval) return
     clearInterval(state.rotateInterval)
 })
 
