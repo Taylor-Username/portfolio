@@ -5,7 +5,7 @@ div.background
         v-row.my-4(v-for='(item, index) in workItems' no-gutters align='center' justify='center')
             v-col(style='width:50vw' cols='4' :order='index % 2 == 0 ? 2 : -2')
                 v-fade-transition
-                    v-img.elevation-6(:src='item.image' width='50vw')
+                    v-img.elevation-6.rounded-lg(:src='item.image' width='50vw')
             v-col(cols='1' :order='index % 2 == 0 ? 1 : -1')
             v-col(style='width:50vw;' cols='4')
                 div.px-6.d-flex.align-center.justify-center.flex-column
